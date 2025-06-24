@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harmonic Worlds - Multiplayer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Hauptcontainer für das Spiel -->
+    <div id="gameContainer">
+        <!-- Canvas für die 3D-Grafik -->
+        <canvas id="gameCanvas"></canvas>
+        
+        <!-- Verbindungsmenü -->
+        <div id="connectionPanel">
+            <h2>🎵 Harmonic Worlds - Multiplayer 🎵</h2>
+            <div>
+                <input type="text" id="roomInput" placeholder="Raumname (optional)" maxlength="20">
+            </div>
+            <div>
+                <input type="text" id="nameInput" placeholder="Dein Name" maxlength="15" value="Spieler">
+            </div>
+            <div>
+                <button class="button" id="createRoomBtn">Raum erstellen</button>
+                <button class="button" id="joinRoomBtn">Raum beitreten</button>
+            </div>
+            <div id="connectionStatus" class="connection-status status-disconnected">
+                Nicht verbunden
+            </div>
+        </div>
+        
+        <!-- Kamera-Umschalt-Button -->
+        <button id="toggleCameraBtn" class="camera-toggle">Kamera wechseln</button>
+        
+        <!-- Spieler-Informationen -->
+        <div id="ui">
+            <div>Position: <span id="playerPos">0, 0</span></div>
+            <div>Audio: <span id="audioStatus">Nicht gestartet</span></div>
+            <div>Zone: <span id="currentZone">Keine</span></div>
+            <div>Raum: <span id="roomName">-</span></div>
+        </div>
+
+        <!-- Spielerliste -->
+        <div id="playersList">
+            <h4>Spieler Online</h4>
+            <div id="playersContainer"></div>
+        </div>
+        
+        <!-- Zonen-Informationen -->
+        <div class="zone-info" id="zoneInfo">
+            <h3 id="zoneName">Willkommen in Harmonic Worlds</h3>
+            <p id="zoneDescription">Bewege dich, um musikalische Zonen zu entdecken!</p>
+        </div>
+        
+        <!-- Spielanleitung -->
+        <div id="instructions">
+            <h3>🎵 Harmonic Worlds - Multiplayer 🎵</h3>
+            <p><strong>WASD</strong> oder <strong>Pfeiltasten</strong> zum bewegen!</p>
+            <p>Lauf auf die <strong>Farbkreise</strong> um Musik zu erschaffen!</p>
+            <p><em>Spiele mit anderen Spielern zusammen!</em></p>
+            <p><small>Andere Spieler erscheinen als leuchtende Figuren</small></p>
+        </div>
+    </div>
+
+    <!-- Externe Bibliotheken und Skripte -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

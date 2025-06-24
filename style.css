@@ -1,0 +1,201 @@
+/* Grundlegende Einstellungen für alle Elemente */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Hauptstil für den Body */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f0f23, #1a1a3e);
+    color: white;
+    overflow: hidden;
+}
+
+/* Container für das gesamte Spiel */
+#gameContainer {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Canvas für die 3D-Grafik */
+#gameCanvas {
+    display: block;
+    cursor: crosshair;
+}
+
+/* Spieler-Informationen (oben links) */
+#ui {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    min-width: 200px;
+}
+
+/* Spielanleitung (unten links) */
+#instructions {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    max-width: 400px;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+/* Verbindungsmenü (Mitte) */
+#connectionPanel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(15px);
+    border: 2px solid rgba(108, 92, 231, 0.5);
+    text-align: center;
+    z-index: 1000;
+}
+
+/* Verbindungsmenü ausgeblendet */
+#connectionPanel.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+/* Eingabefeld für den Raumnamen */
+#roomInput {
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    text-align: center;
+}
+
+/* Platzhaltertext für das Raumeingabefeld */
+#roomInput::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Stil für alle Buttons */
+.button {
+    background: linear-gradient(45deg, #6c5ce7, #a29bfe);
+    border: none;
+    padding: 15px 30px;
+    margin: 5px;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+/* Hover-Effekt für Buttons */
+.button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(108, 92, 231, 0.5);
+}
+
+/* Deaktivierter Button */
+.button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Zonen-Informationen (Mitte) */
+.zone-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(15px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+/* Zonen-Informationen sichtbar */
+.zone-info.visible {
+    opacity: 1;
+}
+
+/* Spielerliste (oben rechts) */
+#playersList {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    min-width: 150px;
+}
+
+/* Einzelner Spieler in der Liste */
+.player-item {
+    padding: 5px;
+    margin: 2px 0;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Verbindungsstatus-Anzeige */
+.connection-status {
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+/* Status: Verbunden */
+.status-connected {
+    background: rgba(76, 217, 100, 0.3);
+}
+
+/* Status: Getrennt */
+.status-disconnected {
+    background: rgba(255, 59, 48, 0.3);
+}
+
+/* Status: Verbindungsaufbau */
+.status-connecting {
+    background: rgba(255, 204, 0, 0.3);
+}
+
+/* Kamera-Umschalt-Button (unten rechts) */
+.camera-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    left: unset;
+    top: unset;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+/* Hover-Effekt für Kamera-Button */
+.camera-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
