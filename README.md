@@ -10,7 +10,7 @@ Dieses Projekt ist ein Multiplayer-Musikspiel, das mit HTML, CSS, JavaScript und
 
 1. **Repository klonen**
    ```
-   git clone <dein-repo-link>
+   git clone https://github.com/Heutelaune/Harmonic-World/tree/main
    cd Harmonic World
    ```
 2. **Abhängigkeiten installieren**
@@ -24,12 +24,6 @@ Dieses Projekt ist ein Multiplayer-Musikspiel, das mit HTML, CSS, JavaScript und
 4. **Im Browser öffnen**
    - Rufe im Browser auf: [http://localhost:8080](http://localhost:8080)
    - Jetzt kannst du Räume erstellen und dem Multiplayer-Spiel beitreten.
-
-### 2. Nutzung über GitHub Pages (nur Einzelspieler/ohne Multiplayer)
-
-- Lade die Dateien auf GitHub hoch und aktiviere GitHub Pages im Repository.
-- **Achtung:** Multiplayer-Funktionen (Raum erstellen, beitreten) funktionieren auf GitHub Pages **nicht**, da dort kein Node.js-Server/WebSocket läuft.
-- Du kannst die statische Seite (z.B. Einzelspieler-Modus oder Demo) nutzen, aber keine Mehrspieler-Features.
 
 ## Multiplayer auf einem eigenen Server deployen
 
