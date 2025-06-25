@@ -11,7 +11,7 @@ Dieses Projekt ist ein Multiplayer-Musikspiel, das mit HTML, CSS, JavaScript und
 1. **Repository klonen**
    ```
    git clone <dein-repo-link>
-   cd Harmonic World mit Kommentaren Kopie
+   cd Harmonic World
    ```
 2. **Abhängigkeiten installieren**
    ```
