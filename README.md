@@ -2,7 +2,7 @@
 
 ## Übersicht
 
-Dieses Projekt ist ein Multiplayer-Musikspiel, das mit HTML, CSS, JavaScript und Node.js (WebSocket) entwickelt wurde.
+Dieses Projekt ist ein Multiplayer-Musikspiel, das mit HTML, CSS, JavaScript und Node.js (WebSocket) entwickelt wurde. Es ist im Rahmen des zweiten Semesters im Kurs Creative Coding 2 an der Hochschule Furtwangen entstanden.
 
 ## Nutzungsmöglichkeiten
 
