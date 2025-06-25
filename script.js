@@ -2,44 +2,44 @@
 class MultiplayerHarmonicWorlds {
     constructor() {
         // Speichern aller wichtigen Variablen für das Spiel
-        this.scene = null;  // 3D-Szene
-        this.camera = null;  // Kamera für die Ansicht
-        this.renderer = null;  // Renderer für die Grafik
-        this.audioContext = null;  // Soundeffekte
-        this.player = null;  // Spieler
+        this.scene = null;  
+        this.camera = null;  
+        this.renderer = null;  
+        this.audioContext = null; 
+        this.player = null;  
         
-        this.otherPlayers = new Map();  // Andere Spieler im Spiel
-        this.zones = [];  // Verschiedenen Zonen im Spiel
-        this.activeZones = new Set();  // Aktive Zonen
-        this.keys = {};  // Tastatureingaben
-        this.isStarted = false;  // Spiel gestartet?
-        this.position = { x: 0, z: 0 };  // Position des Spielers
-        this.masterGain = null;  // Hauptlautstärke
-        this.oscillators = new Map();  // Für die Töne
-        this.playerOscillators = new Map();  // Töne der anderen Spieler
+        this.otherPlayers = new Map();  
+        this.zones = [];  
+        this.activeZones = new Set();  
+        this.keys = {};  
+        this.isStarted = false;  
+        this.position = { x: 0, z: 0 }; 
+        this.masterGain = null; 
+        this.oscillators = new Map();  
+        this.playerOscillators = new Map();  
         
         // Multiplayer-Einstellungen
-        this.socket = null;  // Verbindung zum Server
-        this.playerId = null;  // Meine Spieler-ID
-        this.playerName = 'Player';  // Mein Spielername
-        this.roomId = null;  // Raum-ID
-        this.isConnected = false;  // Bin ich verbunden?
+        this.socket = null;  
+        this.playerId = null;  
+        this.playerName = 'Player'; 
+        this.roomId = null;  
+        this.isConnected = false;  
         
         // Kameraeinstellungen
-        this.isFirstPerson = false;  // Erste-Person-Ansicht?
-        this.cameraRotation = { x: 0, y: 0 };  // Kamerarotation
-        this.mouseSensitivity = 0.002;  // Mausempfindlichkeit
+        this.isFirstPerson = false;  
+        this.cameraRotation = { x: 0, y: 0 };  
+        this.mouseSensitivity = 0.002;  
         
-        this.init();  // Spiel starten
+        this.init(); 
     }
     
     // Initialisierung des Spiels
     init() {
-        this.setupThreeJS();  // 3D-Umgebung einrichten
-        this.setupControls();  // Steuerung einrichten
-        this.createWorld();  // Spielwelt erstellen
-        this.setupConnectionUI();  // Verbindungsmenü einrichten
-        this.animate();  // Animation starten
+        this.setupThreeJS();  
+        this.setupControls();  
+        this.createWorld();  
+        this.setupConnectionUI();  
+        this.animate(); 
     }
     
     // Verbindungsmenü einrichten
